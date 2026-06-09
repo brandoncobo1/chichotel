@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Boutique Hotel & Spa Vlorë | Luxury Accommodation Albania</title>
+    <meta name="description" content="Experience boutique luxury at Chic Hotel & Spa in Vlorë, Albania. 500 metres from Vlorë Beach, featuring spa, sauna, restaurant with outdoor terrace, and elegantly designed rooms.">
+    <meta name="keywords" content="Chic Hotel Vlore, boutique hotel Albania, spa hotel Vlore, luxury accommodation Vlore, Albanian Riviera hotel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.chicboutique.al/">
+    <meta property="og:title" content="Chic Boutique Hotel & Spa Vlorë">
+    <meta property="og:description" content="Boutique luxury with spa, restaurant, and beach proximity in the heart of Vlorë, Albania.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.chicboutique.al/">
+    <meta property="og:image" content="https://res.cloudinary.com/dr63qmw21/image/upload/v1780849595/IMG_6198_jtib9d.webp">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Hotel","name":"Chic Boutique Hotel & Spa","description":"Boutique hotel with spa amenities in Vlorë, Albania","url":"https://www.chicboutique.al","telephone":"+355686666601","email":"info@chicboutique.al","address":{"@type":"PostalAddress","streetAddress":"Rruga Shyqyri Ali Merka","addressLocality":"Vlorë","addressCountry":"AL"},"starRating":{"@type":"Rating","ratingValue":"4"},"sameAs":["https://www.instagram.com/chicboutiquehotelspa/","https://www.facebook.com/chicboutiquehotelspa"]}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark:   #0A0A0A;
+            --dark2:  #111110;
+            --gold:   #B8973E;
+            --gold2:  #D4AF6A;
+            --white:  #FAFAF7;
+            --bg:     #F4F1EB;
+            --muted:  #8C8880;
+            --border: #DDD9D0;
+            --font-d: 'Playfair Display', serif;
+            --font-e: 'Cormorant Garamond', serif;
+            --font-s: 'Inter', sans-serif;
+            --ease:   cubic-bezier(0.4,0,0.2,1);
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { background:var(--white); color:var(--dark); font-family:var(--font-s); font-weight:300; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+        img  { display:block; width:100%; object-fit:cover; }
+        a    { text-decoration:none; color:inherit; }
+        .container { max-width:1200px; margin:0 auto; padding:0 40px; }
+        @media(max-width:768px){ .container{ padding:0 20px; } }
+        .section-label { display:block; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:14px; font-weight:500; }
+
+        /* ── REVEAL ─────────────────────────────────── */
+        .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.9s var(--ease), transform 0.9s var(--ease); }
+        .reveal.active { opacity:1; transform:translateY(0); }
+
+        /* ── WORD BLUR ANIMATION ────────────────────── */
+        @keyframes wordIn {
+            from { opacity:0; filter:blur(10px); transform:translateY(16px); }
+            to   { opacity:1; filter:blur(0);    transform:translateY(0); }
+        }
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(18px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        @keyframes lineGrow {
+            from { width:0; }
+            to   { width:48px; }
+        }
+        @keyframes scrollPulse {
+            0%,100% { opacity:0.3; transform:translateY(0); }
+            50%     { opacity:1;   transform:translateY(8px); }
+        }
+        /* Mobile hero — drop from above */
+        @keyframes heroDrop {
+            from { transform:scale(1.08) translateY(-5%); opacity:0; }
+            to   { transform:scale(1.05) translateY(0);   opacity:1; }
+        }
+        .blur-word {
+            display:inline-block; opacity:0;
+            animation:wordIn 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
+        }
+
+        /* ── NAV ────────────────────────────────────── */
+        nav {
+            position:fixed; top:0; left:0; width:100%; z-index:1000;
+            padding:22px 40px;
+            display:flex; justify-content:space-between; align-items:center;
+            transition:background 0.45s var(--ease), padding 0.45s var(--ease), box-shadow 0.45s var(--ease);
+            color:var(--white);
+        }
+        nav.scrolled {
+            background:rgba(250,250,247,0.97); backdrop-filter:blur(12px);
+            color:var(--dark); padding:14px 40px;
+            box-shadow:0 1px 0 var(--border);
+        }
+
+        /* Nav logo (replaces EST. MMXXIV) */
+        .nav-logo-wrap { display:flex; align-items:center; }
+        .nav-logo-img {
+            height:50px; width:auto; object-fit:contain;
+            filter:brightness(0) invert(1) drop-shadow(0 1px 4px rgba(0,0,0,0.3));
+            transition:filter 0.45s;
+        }
+        nav.scrolled .nav-logo-img { filter:none; }
+
+        /* Nav center — Cormorant Garamond, 20% bigger */
+        .nav-center {
+            font-family:var(--font-e); font-size:20px; letter-spacing:0.14em;
+            text-transform:uppercase; font-weight:400; font-style:italic;
+            position:absolute; left:50%; transform:translateX(-50%); white-space:nowrap;
+        }
+        .nav-right { display:flex; align-items:center; gap:20px; }
+        .nav-phone { font-size:11px; letter-spacing:0.08em; }
+        .lang-sw { display:flex; align-items:center; gap:2px; }
+        .lang-btn {
+            background:none; border:none; cursor:pointer;
+            font-family:var(--font-s); font-size:10px; letter-spacing:0.12em;
+            text-transform:uppercase; font-weight:500;
+            color:inherit; opacity:0.45; transition:opacity 0.2s; padding:3px 5px;
+        }
+        .lang-btn:hover { opacity:0.9; }
+        .lang-btn.active { opacity:1; border-bottom:1px solid currentColor; }
+        .lang-div { font-size:9px; opacity:0.25; }
+
+        @media(max-width:768px){
+            nav { padding:18px 20px; background:rgba(250,250,247,0.97); color:var(--dark); backdrop-filter:blur(12px); box-shadow:0 1px 0 var(--border); }
+            nav.scrolled { padding:18px 20px; }
+            .nav-logo-wrap, .nav-right { display:none; }
+            .nav-center { font-family:var(--font-e); font-size:18px; letter-spacing:0.1em; font-style:italic; }
+        }
+
+        /* Mobile logo + lang overlay */
+        .mobile-top {
+            display:none; position:absolute;
+            top:72px; left:0; right:0; z-index:10;
+            padding:0 20px;
+            justify-content:space-between; align-items:center;
+        }
+        .mobile-logo-img {
+            height:38px; width:auto;
+            filter:brightness(0) invert(1) drop-shadow(0 1px 6px rgba(0,0,0,0.55));
+        }
+        .mobile-lang { display:flex; align-items:center; gap:4px; }
+        .mobile-lang .lang-btn { color:#fff; font-size:12px; opacity:0.65; text-shadow:0 1px 6px rgba(0,0,0,0.6); }
+        .mobile-lang .lang-btn.active { opacity:1; border-bottom:1px solid rgba(255,255,255,0.8); }
+        .mobile-lang .lang-div { color:rgba(255,255,255,0.3); font-size:10px; }
+        @media(max-width:767px){ .mobile-top{ display:flex; } }
+
+        /* ── HERO ───────────────────────────────────── */
+        .hero { position:relative; height:100vh; min-height:600px; overflow:hidden; display:flex; align-items:flex-end; }
+
+        /* Desktop bg — Ken Burns cinematic zoom + drift */
+        .hero-bg {
+            position:absolute; inset:0; z-index:0;
+            background:url('https://res.cloudinary.com/dr63qmw21/image/upload/v1780849595/IMG_6198_jtib9d.webp') center/cover no-repeat;
+            will-change:transform;
+            animation:kenBurns 28s ease-in-out infinite alternate;
+        }
+        @keyframes kenBurns {
+            0%   { transform:scale(1.00) translate(0%,    0%);     filter:brightness(0.88); }
+            20%  { transform:scale(1.06) translate(-0.8%, -0.5%);  filter:brightness(0.92); }
+            50%  { transform:scale(1.10) translate(0.5%,  -1.0%);  filter:brightness(0.90); }
+            80%  { transform:scale(1.07) translate(-0.4%, 0.6%);   filter:brightness(0.93); }
+            100% { transform:scale(1.03) translate(0.6%,  -0.3%);  filter:brightness(0.88); }
+        }
+
+        /* Mobile bg — drop-from-above then Ken Burns */
+        .hero-bg-mobile {
+            display:none; position:absolute; inset:0; z-index:0;
+            background:url('https://res.cloudinary.com/dr63qmw21/image/upload/v1780849595/IMG_6196_fantyh.webp') center/cover no-repeat;
+            animation:heroDrop 1.2s cubic-bezier(0.22,1,0.36,1) forwards, kenBurns 28s ease-in-out 1.5s infinite alternate;
+            opacity:0;
+        }
+        @media(max-width:767px){
+            .hero-bg { display:none; }
+            .hero-bg-mobile { display:block; }
+        }
+
+        /* Particle canvas */
+        #heroCanvas {
+            position:absolute; inset:0; z-index:2; pointer-events:none;
+            width:100%; height:100%; opacity:0.55;
+        }
+
+        /* Diagonal light sweep */
+        .hero-sweep {
+            position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden;
+        }
+        .hero-sweep::before {
+            content:'';
+            position:absolute;
+            top:-100%; left:-60%;
+            width:30%; height:300%;
+            background:linear-gradient(90deg, transparent 0%, rgba(212,175,106,0.06) 40%, rgba(255,255,255,0.09) 50%, rgba(212,175,106,0.06) 60%, transparent 100%);
+            transform:rotate(18deg);
+            animation:lightSweep 18s ease-in-out 3s infinite;
+        }
+        @keyframes lightSweep {
+            0%   { left:-60%; opacity:0; }
+            5%   { opacity:1; }
+            50%  { left:130%; opacity:1; }
+            55%  { opacity:0; }
+            100% { left:130%; opacity:0; }
+        }
+
+        /* Vignette + gradient overlay */
+        .hero-overlay {
+            position:absolute; inset:0; z-index:3;
+            background:
+                radial-gradient(ellipse at 60% 30%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.40) 70%),
+                linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.18) 30%, rgba(0,0,0,0.78) 100%);
+        }
+
+        /* Hero content — shifted 15px lower on both */
+        .hero-content { position:relative; z-index:4; padding:0 40px 65px; width:100%; }
+        @media(max-width:768px){ .hero-content{ padding:0 20px 95px; } }
+
+        /* Hero label — "Elegance. Comfort. Class." — bigger, more visible */
+        .hero-pre {
+            font-family:var(--font-e); font-size:14px; letter-spacing:0.22em;
+            text-transform:uppercase; color:rgba(255,255,255,0.92);
+            margin-bottom:18px; font-weight:400; font-style:italic;
+            animation:fadeUp 0.7s ease forwards 0.3s; opacity:0;
+        }
+
+        /* Hero title — desktop 20% smaller, mobile 10% smaller */
+        .hero-title {
+            font-family:var(--font-d);
+            font-size:clamp(42px,6.8vw,87px);
+            font-weight:400; color:var(--white); line-height:1.0;
+            margin-bottom:14px;
+        }
+        @media(max-width:767px){
+            .hero-title { font-size:clamp(38px,9vw,60px); }
+        }
+
+        .hero-gold-line {
+            height:1px; background:var(--gold2); margin-bottom:26px;
+            width:0; animation:lineGrow 0.7s ease forwards 1.4s;
+        }
+        .hero-sub {
+            font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
+            color:rgba(255,255,255,0.52); margin-bottom:42px;
+            animation:fadeUp 0.6s ease forwards 1.6s; opacity:0;
+        }
+        .hero-cta {
+            display:inline-flex; align-items:center; gap:12px;
+            border:1px solid rgba(255,255,255,0.45); color:var(--white);
+            padding:15px 32px; font-size:10px; letter-spacing:0.22em;
+            text-transform:uppercase; font-weight:500;
+            transition:background 0.35s, border-color 0.35s;
+            animation:fadeUp 0.6s ease forwards 1.8s; opacity:0;
+        }
+        .hero-cta:hover { background:var(--gold); border-color:var(--gold); }
+
+        .scroll-cue {
+            position:absolute; bottom:36px; right:40px; z-index:4;
+            display:flex; flex-direction:column; align-items:center; gap:8px;
+            font-size:9px; letter-spacing:0.22em; text-transform:uppercase;
+            color:rgba(255,255,255,0.42);
+            animation:fadeUp 0.6s ease forwards 2s; opacity:0;
+        }
+        .scroll-arrow { animation:scrollPulse 2s ease infinite 2.2s; }
+        @media(max-width:768px){ .scroll-cue{ right:20px; bottom:130px; } }
+
+        /* ── STATS BAR ──────────────────────────────── */
+        .stats-bar { background:var(--dark2); padding:32px 0; }
+        .stats-inner { display:grid; grid-template-columns:repeat(4,1fr); }
+        .stat-item { padding:0 36px; border-left:1px solid rgba(255,255,255,0.08); text-align:center; }
+        .stat-item:first-child { border-left:none; }
+        .stat-num { font-family:var(--font-e); font-size:38px; font-style:italic; color:var(--gold2); display:block; margin-bottom:5px; }
+        .stat-label { font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.38); }
+        @media(max-width:768px){
+            .stats-inner { grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(255,255,255,0.06); }
+            .stat-item { background:var(--dark2); border-left:none; padding:22px 16px; }
+        }
+
+        /* ── MANIFESTO ──────────────────────────────── */
+        .manifesto { background:var(--white); padding:120px 0; text-align:center; }
+        .manifesto-inner { max-width:700px; margin:0 auto; }
+        .manifesto-title { font-family:var(--font-d); font-size:clamp(34px,4.5vw,58px); font-weight:400; font-style:italic; line-height:1.18; margin-bottom:28px; }
+        .manifesto-text { font-size:15px; color:var(--muted); line-height:1.85; max-width:540px; margin:0 auto; }
+        @media(max-width:768px){ .manifesto{ padding:80px 0; } }
+
+        /* ── ROOMS ──────────────────────────────────── */
+        .rooms { background:var(--bg); padding:100px 0; }
+        .section-head { text-align:center; margin-bottom:56px; }
+        .section-head h2 { font-family:var(--font-d); font-size:clamp(30px,4vw,50px); font-weight:400; font-style:italic; }
+        .rooms-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:3px; }
+        @media(max-width:768px){ .rooms-grid{ grid-template-columns:1fr; gap:14px; } }
+        .room-card { position:relative; overflow:hidden; }
+        .room-card-img { height:380px; transition:transform 0.9s var(--ease); }
+        @media(max-width:768px){ .room-card-img{ height:260px; } }
+        .room-card:hover .room-card-img { transform:scale(1.04); }
+        .room-card-body {
+            position:absolute; bottom:0; left:0; right:0; padding:28px;
+            background:linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0) 100%);
+            color:var(--white);
+        }
+        .room-card-label { font-size:9px; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold2); margin-bottom:6px; font-weight:500; }
+        .room-card-name { font-family:var(--font-d); font-size:22px; font-style:italic; margin-bottom:10px; }
+        .room-card-footer { display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,0.14); padding-top:12px; margin-top:4px; }
+        .room-price { font-size:11px; letter-spacing:0.08em; opacity:0.65; }
+        .room-link { font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold2); font-weight:500; transition:opacity 0.2s; }
+        .room-link:hover { opacity:0.7; }
+
+        /* ── SPA ────────────────────────────────────── */
+        .spa { background:var(--dark2); color:var(--white); }
+        .spa-inner { display:grid; grid-template-columns:1fr 1fr; min-height:580px; }
+        .spa-img { overflow:hidden; }
+        .spa-img img { height:100%; transition:transform 0.9s var(--ease); }
+        .spa-img:hover img { transform:scale(1.03); }
+        .spa-content { padding:80px 64px; display:flex; flex-direction:column; justify-content:center; }
+        .spa-content h2 { font-family:var(--font-d); font-size:clamp(30px,3.2vw,50px); font-weight:400; font-style:italic; margin-bottom:22px; line-height:1.2; }
+        .spa-content p { font-size:14px; color:rgba(255,255,255,0.5); line-height:1.9; margin-bottom:36px; }
+        .gold-rule { width:44px; height:1px; background:var(--gold); margin-bottom:36px; }
+        .spa-features { display:flex; flex-direction:column; gap:14px; }
+        .spa-feature { display:flex; align-items:center; gap:14px; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:rgba(255,255,255,0.42); }
+        .spa-feature::before { content:''; width:22px; height:1px; background:var(--gold); flex-shrink:0; }
+        @media(max-width:768px){
+            .spa-inner { grid-template-columns:1fr; }
+            .spa-img { height:300px; }
+            .spa-content { padding:52px 24px; }
+        }
+
+        /* ── RESTAURANT ─────────────────────────────── */
+        .restaurant { background:var(--white); }
+        .rest-inner { display:grid; grid-template-columns:1fr 1fr; min-height:540px; }
+        .rest-content { padding:80px 64px; display:flex; flex-direction:column; justify-content:center; order:1; }
+        .rest-img { overflow:hidden; order:2; }
+        .rest-img img { height:100%; transition:transform 0.9s var(--ease); }
+        .rest-img:hover img { transform:scale(1.03); }
+        .rest-content h2 { font-family:var(--font-d); font-size:clamp(28px,3.2vw,46px); font-weight:400; font-style:italic; margin-bottom:20px; line-height:1.2; }
+        .rest-content p { font-size:14px; color:var(--muted); line-height:1.9; margin-bottom:36px; }
+        .rest-cta {
+            display:inline-flex; align-items:center; gap:10px;
+            border:1px solid var(--dark); color:var(--dark);
+            padding:14px 28px; font-size:10px; letter-spacing:0.2em;
+            text-transform:uppercase; font-weight:500;
+            transition:background 0.3s, color 0.3s;
+        }
+        .rest-cta:hover { background:var(--dark); color:var(--white); }
+        @media(max-width:768px){
+            .rest-inner { grid-template-columns:1fr; }
+            .rest-img { height:280px; order:1; }
+            .rest-content { order:2; padding:50px 24px; }
+        }
+
+        /* ── AMENITIES ──────────────────────────────── */
+        .amenities { background:var(--bg); padding:100px 0; }
+        .amenities-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--border); }
+        @media(max-width:768px){ .amenities-grid{ grid-template-columns:repeat(2,1fr); } }
+        .amenity-item { padding:40px 32px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+        .amenity-item:nth-child(3n){ border-right:none; }
+        .amenity-icon { margin-bottom:16px; color:var(--gold); }
+        .amenity-name { font-family:var(--font-d); font-size:17px; font-style:italic; margin-bottom:6px; }
+        .amenity-desc { font-size:12px; color:var(--muted); line-height:1.7; }
+
+        /* ── LOCATION ───────────────────────────────── */
+        .location { background:var(--white); padding:100px 0; }
+        .loc-inner { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+        @media(max-width:768px){ .loc-inner{ grid-template-columns:1fr; gap:40px; } }
+        .loc-map { overflow:hidden; height:440px; }
+        .loc-map iframe { width:100%; height:100%; border:0; }
+        .loc-content h2 { font-family:var(--font-d); font-size:clamp(28px,3vw,44px); font-weight:400; font-style:italic; margin-bottom:36px; }
+        .distance-list { list-style:none; }
+        .distance-item { display:flex; justify-content:space-between; align-items:center; padding:15px 0; border-bottom:1px solid var(--border); font-size:13px; }
+        .distance-item:last-child { border-bottom:none; }
+        .dist-val { font-family:var(--font-d); font-size:16px; font-style:italic; color:var(--gold); }
+
+        /* ── GALLERY ────────────────────────────────── */
+        .gallery { background:var(--dark2); padding:100px 0; }
+        .gallery .section-label { color:var(--gold2); }
+        .gallery .section-head h2 { color:var(--white); }
+        .gallery-grid {
+            display:grid;
+            grid-template-columns:2fr 1fr 1fr;
+            grid-template-rows:290px 290px;
+            gap:3px;
+        }
+        @media(max-width:768px){
+            .gallery-grid { grid-template-columns:1fr 1fr; grid-template-rows:190px 190px 190px; }
+            .gallery-item.tall { grid-row:auto; }
+        }
+        .gallery-item { overflow:hidden; position:relative; }
+        .gallery-item img { height:100%; transition:transform 0.8s var(--ease), filter 0.35s; }
+        .gallery-item:hover img { transform:scale(1.06); filter:brightness(0.82); }
+        .gallery-item.tall { grid-row:1/3; }
+
+        /* ── CTA ────────────────────────────────────── */
+        .cta { background:var(--dark); padding:130px 0; text-align:center; }
+        .cta .section-label { color:var(--gold2); }
+        .cta h2 { font-family:var(--font-d); font-size:clamp(44px,7vw,96px); font-weight:400; font-style:italic; color:var(--white); margin-bottom:16px; line-height:1.08; }
+        .cta-sub { font-size:12px; letter-spacing:0.1em; color:rgba(255,255,255,0.32); margin-bottom:52px; }
+        .cta-btn {
+            display:inline-flex; align-items:center; gap:12px;
+            border:1px solid rgba(255,255,255,0.28); color:var(--white);
+            padding:17px 40px; font-size:10px; letter-spacing:0.24em;
+            text-transform:uppercase; font-weight:500;
+            transition:background 0.35s, border-color 0.35s;
+        }
+        .cta-btn:hover { background:var(--gold); border-color:var(--gold); }
+
+        /* ── FOOTER ─────────────────────────────────── */
+        footer { background:var(--dark2); color:rgba(255,255,255,0.36); padding:52px 0 32px; }
+        .footer-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; margin-bottom:44px; }
+        @media(max-width:768px){ .footer-grid{ grid-template-columns:1fr; gap:28px; } }
+        .footer-brand { font-family:var(--font-e); font-size:20px; font-style:italic; color:var(--white); display:block; margin-bottom:14px; }
+        footer p { font-size:12px; line-height:2; }
+        .footer-bottom { border-top:1px solid rgba(255,255,255,0.07); padding-top:26px; text-align:center; font-size:11px; letter-spacing:0.08em; }
+        .footer-link { color:var(--gold2); transition:opacity 0.2s; }
+        .footer-link:hover { opacity:0.65; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+    <div class="nav-logo-wrap">
+        <img src="https://res.cloudinary.com/dr63qmw21/image/upload/v1780854547/logo-1024x429-removebg-preview_lwotz9.png"
+             alt="Chic Boutique Hotel & Spa" class="nav-logo-img">
+    </div>
+    <div class="nav-center">Chic Boutique Hotel & Spa</div>
+    <div class="nav-right">
+        <div class="lang-sw">
+            <button class="lang-btn active" onclick="setLang('en')">ENG</button>
+            <span class="lang-div">|</span>
+            <button class="lang-btn" onclick="setLang('sq')">ALB</button>
+            <span class="lang-div">|</span>
+            <button class="lang-btn" onclick="setLang('it')">ITA</button>
+        </div>
+        <span class="nav-phone">+355 68 666 6601</span>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-bg-mobile"></div>
+    <div class="hero-sweep"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <!-- Mobile: logo left + lang right, same vertical level -->
+    <div class="mobile-top">
+        <img src="https://res.cloudinary.com/dr63qmw21/image/upload/v1780854547/logo-1024x429-removebg-preview_lwotz9.png"
+             alt="Chic Hotel logo" class="mobile-logo-img">
+        <div class="mobile-lang">
+            <button class="lang-btn active" onclick="setLang('en')">ENG</button>
+            <span class="lang-div">|</span>
+            <button class="lang-btn" onclick="setLang('sq')">ALB</button>
+            <span class="lang-div">|</span>
+            <button class="lang-btn" onclick="setLang('it')">ITA</button>
+        </div>
+    </div>
+
+    <div class="hero-content">
+        <p class="hero-pre" data-i18n="heroLabel"></p>
+        <h1 class="hero-title" id="heroTitle"></h1>
+        <div class="hero-gold-line"></div>
+        <p class="hero-sub" data-i18n="heroSub"></p>
+        <a href="booking.html" class="hero-cta" data-i18n="reserve"></a>
+    </div>
+
+    <div class="scroll-cue">
+        <span data-i18n="scroll"></span>
+        <span class="scroll-arrow">↓</span>
+    </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+    <div class="container">
+        <div class="stats-inner">
+            <div class="stat-item"><span class="stat-num">500m</span><span class="stat-label" data-i18n="stat1"></span></div>
+            <div class="stat-item"><span class="stat-num">4★</span><span class="stat-label" data-i18n="stat2"></span></div>
+            <div class="stat-item"><span class="stat-num" style="font-family:var(--font-e);font-style:italic;">Spa</span><span class="stat-label" data-i18n="stat3"></span></div>
+            <div class="stat-item"><span class="stat-num">24h</span><span class="stat-label" data-i18n="stat4"></span></div>
+        </div>
+    </div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto reveal">
+    <div class="container">
+        <div class="manifesto-inner">
+            <span class="section-label" data-i18n="manifestoLabel"></span>
+            <h2 class="manifesto-title" data-i18n="manifestoTitle"></h2>
+            <p class="manifesto-text" data-i18n="manifestoText"></p>
+        </div>
+    </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-label" data-i18n="roomsLabel"></span>
+            <h2 data-i18n="roomsTitle"></h2>
+        </div>
+        <div class="rooms-grid">
+            <a href="junior-room.html" class="room-card reveal">
+                <img class="room-card-img" src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/444511349.jpg" alt="Junior Room">
+                <div class="room-card-body">
+                    <div class="room-card-label" data-i18n="r1label"></div>
+                    <div class="room-card-name" data-i18n="r1name"></div>
+                    <div class="room-card-footer">
+                        <span class="room-price" data-i18n="r1price"></span>
+                        <span class="room-link" data-i18n="discover"></span>
+                    </div>
+                </div>
+            </a>
+            <a href="premium-triple.html" class="room-card reveal">
+                <img class="room-card-img" src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/444510472.jpg" alt="Premium Triple Room">
+                <div class="room-card-body">
+                    <div class="room-card-label" data-i18n="r2label"></div>
+                    <div class="room-card-name" data-i18n="r2name"></div>
+                    <div class="room-card-footer">
+                        <span class="room-price" data-i18n="r2price"></span>
+                        <span class="room-link" data-i18n="discover"></span>
+                    </div>
+                </div>
+            </a>
+            <a href="deluxe-triple.html" class="room-card reveal">
+                <img class="room-card-img" src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/444510273.jpg" alt="Deluxe Triple Room">
+                <div class="room-card-body">
+                    <div class="room-card-label" data-i18n="r3label"></div>
+                    <div class="room-card-name" data-i18n="r3name"></div>
+                    <div class="room-card-footer">
+                        <span class="room-price" data-i18n="r3price"></span>
+                        <span class="room-link" data-i18n="discover"></span>
+                    </div>
+                </div>
+            </a>
+            <a href="chic-suite.html" class="room-card reveal">
+                <img class="room-card-img" src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/444510468.jpg" alt="Chic Suite">
+                <div class="room-card-body">
+                    <div class="room-card-label" data-i18n="r4label"></div>
+                    <div class="room-card-name" data-i18n="r4name"></div>
+                    <div class="room-card-footer">
+                        <span class="room-price" data-i18n="r4price"></span>
+                        <span class="room-link" data-i18n="discover"></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SPA -->
+<section class="spa reveal" id="spa">
+    <div class="spa-inner">
+        <div class="spa-img">
+            <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/864225889-3.jpg" alt="Spa & Wellness">
+        </div>
+        <div class="spa-content">
+            <span class="section-label" data-i18n="spaLabel"></span>
+            <h2 data-i18n="spaTitle"></h2>
+            <div class="gold-rule"></div>
+            <p data-i18n="spaText"></p>
+            <div class="spa-features">
+                <div class="spa-feature" data-i18n="spaf1"></div>
+                <div class="spa-feature" data-i18n="spaf2"></div>
+                <div class="spa-feature" data-i18n="spaf3"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESTAURANT -->
+<section class="restaurant reveal" id="dining">
+    <div class="rest-inner">
+        <div class="rest-content">
+            <span class="section-label" data-i18n="restLabel"></span>
+            <h2 data-i18n="restTitle"></h2>
+            <p data-i18n="restText"></p>
+            <a href="booking.html" class="rest-cta" data-i18n="reserve"></a>
+        </div>
+        <div class="rest-img">
+            <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/319148092.jpg" alt="Restaurant & Bar">
+        </div>
+    </div>
+</section>
+
+<!-- AMENITIES -->
+<section class="amenities" id="amenities">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-label" data-i18n="amLabel"></span>
+            <h2 data-i18n="amTitle"></h2>
+        </div>
+        <div class="amenities-grid reveal">
+            <div class="amenity-item">
+                <div class="amenity-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <h4 class="amenity-name" data-i18n="am1n"></h4>
+                <p class="amenity-desc" data-i18n="am1d"></p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V12M20 22V12M2 12h20M12 2v10M8 6l4-4 4 4"/></svg></div>
+                <h4 class="amenity-name" data-i18n="am2n"></h4>
+                <p class="amenity-desc" data-i18n="am2d"></p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+                <h4 class="amenity-name" data-i18n="am3n"></h4>
+                <p class="amenity-desc" data-i18n="am3d"></p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                <h4 class="amenity-name" data-i18n="am4n"></h4>
+                <p class="amenity-desc" data-i18n="am4d"></p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8Z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+                <h4 class="amenity-name" data-i18n="am5n"></h4>
+                <p class="amenity-desc" data-i18n="am5d"></p>
+            </div>
+            <div class="amenity-item">
+                <div class="amenity-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg></div>
+                <h4 class="amenity-name" data-i18n="am6n"></h4>
+                <p class="amenity-desc" data-i18n="am6d"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location reveal" id="location">
+    <div class="container">
+        <div class="loc-inner">
+            <div class="loc-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.3!2d19.4902!3d40.4549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134533d7c8d3f4b1%3A0xa2d3f9e0b1c4d8e5!2sChic%20Boutique%20Hotel%20Vlore!5e0!3m2!1sen!2sal!4v1700000000000" allowfullscreen loading="lazy" title="Chic Hotel location"></iframe>
+            </div>
+            <div class="loc-content">
+                <span class="section-label" data-i18n="locLabel"></span>
+                <h2 data-i18n="locTitle"></h2>
+                <ul class="distance-list">
+                    <li class="distance-item"><span data-i18n="loc1"></span><span class="dist-val" data-i18n="loc1d"></span></li>
+                    <li class="distance-item"><span data-i18n="loc2"></span><span class="dist-val" data-i18n="loc2d"></span></li>
+                    <li class="distance-item"><span data-i18n="loc3"></span><span class="dist-val" data-i18n="loc3d"></span></li>
+                    <li class="distance-item"><span data-i18n="loc4"></span><span class="dist-val" data-i18n="loc4d"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-label" data-i18n="galLabel"></span>
+            <h2 data-i18n="galTitle"></h2>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item tall">
+                <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/864234155.jpg" alt="Chic Hotel">
+            </div>
+            <div class="gallery-item">
+                <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/864230180-2.jpg" alt="Chic Hotel">
+            </div>
+            <div class="gallery-item">
+                <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/864231272-2.jpg" alt="Chic Hotel">
+            </div>
+            <div class="gallery-item">
+                <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/864228654-2.jpg" alt="Chic Hotel">
+            </div>
+            <div class="gallery-item">
+                <img src="https://chicboutiquehotel.al/wp-content/uploads/2026/05/864242805-2.jpg" alt="Chic Hotel">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta reveal">
+    <div class="container">
+        <span class="section-label" data-i18n="ctaLabel"></span>
+        <h2 data-i18n="ctaTitle"></h2>
+        <p class="cta-sub" data-i18n="ctaSub"></p>
+        <a href="booking.html" class="cta-btn" data-i18n="ctaBtn"></a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <span class="footer-brand">Chic Boutique Hotel & Spa</span>
+                <p>Rruga Shyqyri Ali Merka</p>
+                <p>Vlorë, Albania</p>
+                <p>+355 68 666 6601</p>
+                <p>info@chicboutique.al</p>
+            </div>
+            <div>
+                <p><a href="https://www.instagram.com/chicboutiquehotelspa/" class="footer-link" target="_blank" rel="noopener">Instagram — @chicboutiquehotelspa</a></p>
+                <p><a href="https://www.facebook.com/chicboutiquehotelspa" class="footer-link" target="_blank" rel="noopener">Facebook — chicboutiquehotelspa</a></p>
+            </div>
+            <div>
+                <p><a href="privacy-policy.html" data-i18n="fp1" style="color:var(--gold2)">Privacy Policy</a></p>
+                
+            </div>
+        </div>
+        <div class="footer-bottom" data-i18n="fcopy"></div>
+    </div>
+</footer>
+
+<script>
+// ================================================================
+// TRANSLATIONS
+// ================================================================
+const T = {
+    en: {
+        heroLabel:"Elegance. Comfort. Class.",
+        heroTitle:"Style lives here.",
+        heroSub:"Boutique Hotel & Spa · Est. 2024",
+        reserve:"RESERVE →",
+        scroll:"SCROLL",
+        stat1:"From the beach", stat2:"Hotel rating", stat3:"& Sauna included", stat4:"Front desk service",
+        manifestoLabel:"THE HOTEL",
+        manifestoTitle:"Chic. Not just a name. A standard.",
+        manifestoText:"Located 500 metres from Vlorë Beach in the heart of Albania's Riviera, Chic Boutique Hotel & Spa is where refined design meets genuine warmth. Every detail — from our spa to our restaurant terrace — is curated for guests who expect more.",
+        roomsLabel:"ACCOMMODATIONS", roomsTitle:"Rooms & Suites",
+        r1label:"STANDARD", r1name:"Junior Room", r1price:"From €85 per night",
+        r2label:"PREMIUM", r2name:"Premium Triple with Balcony", r2price:"From €130 per night",
+        r3label:"DELUXE", r3name:"Deluxe Triple with Balcony", r3price:"From €160 per night",
+        r4label:"SUITE", r4name:"Chic Suite — Sea View", r4price:"From €240 per night",
+        discover:"Discover →",
+        spaLabel:"SPA & WELLNESS", spaTitle:"Where stillness becomes luxury.",
+        spaText:"Our spa and sauna are a world apart from the city's pace. Designed for complete restoration — whether you arrive for an afternoon or an entire stay — every visit is an experience in itself.",
+        spaf1:"Sauna", spaf2:"Wellness Treatments", spaf3:"City & Sea Views",
+        restLabel:"RESTAURANT & BAR", restTitle:"Taste the Albanian Riviera.",
+        restText:"Our restaurant with outdoor terrace brings together seasonal Albanian ingredients, Adriatic seafood, and an extensive wine selection. As day turns to evening, the bar takes over — cocktails crafted for the golden hour.",
+        amLabel:"EXPERIENCE", amTitle:"Everything you need. Nothing you don't.",
+        am1n:"Sea & City Views", am1d:"Panoramic perspectives from every floor.",
+        am2n:"Spa & Sauna", am2d:"Full wellness experience on-site.",
+        am3n:"Restaurant & Bar", am3d:"Outdoor terrace, seasonal menu, crafted cocktails.",
+        am4n:"500m to Beach", am4d:"Vlorë Beach just a short walk away.",
+        am5n:"Free Parking", am5d:"Private on-site parking for all guests.",
+        am6n:"Free Wi-Fi", am6d:"High-speed connection throughout.",
+        locLabel:"LOCATION", locTitle:"Steps from the sea.",
+        loc1:"Vlorë Beach", loc1d:"500 m",
+        loc2:"City Center", loc2d:"5 min walk",
+        loc3:"Independence Square", loc3d:"8 min walk",
+        loc4:"Vlorë Airport (future)", loc4d:"25 km",
+        galLabel:"GALLERY", galTitle:"Inside Chic.",
+        ctaLabel:"RESERVATIONS", ctaTitle:"Your stay awaits.",
+        ctaSub:"Chic Boutique Hotel & Spa — Vlorë, Albania",
+        ctaBtn:"RESERVE A ROOM →",
+        footerBook:"Book your stay online",
+        fp1:"Privacy Policy", fp2:"Terms of Service",
+        fcopy:"© 2024 CHIC BOUTIQUE HOTEL & SPA. ALL RIGHTS RESERVED."
+    },
+    sq: {
+        heroLabel:"Elegancë. Komoditet. Klasë.",
+        heroTitle:"Stili jeton këtu.",
+        heroSub:"Hotel Boutique & Spa · Est. 2024",
+        reserve:"REZERVO →",
+        scroll:"LËVIZ",
+        stat1:"Nga plazhi", stat2:"Vlerësim hoteli", stat3:"& Sauna e përfshirë", stat4:"Shërbim recepsioni",
+        manifestoLabel:"HOTELI",
+        manifestoTitle:"Chic. Jo vetëm emër. Një standard.",
+        manifestoText:"I vendosur 500 metra nga Plazhi i Vlorës, në zemër të Rivierës Shqiptare, Chic Boutique Hotel & Spa është vendi ku dizajni i rafinuar takohet me ngrohtësinë e vërtetë.",
+        roomsLabel:"AKOMODIM", roomsTitle:"Dhoma & Suite",
+        r1label:"STANDARD", r1name:"Dhomë Junior", r1price:"Nga €85 për natë",
+        r2label:"PREMIUM", r2name:"Premium Trefishe me Ballkon", r2price:"Nga €130 për natë",
+        r3label:"DELUXE", r3name:"Deluxe Trefishe me Ballkon", r3price:"Nga €160 për natë",
+        r4label:"SUITE", r4name:"Suite Chic — Pamje nga Deti", r4price:"Nga €240 për natë",
+        discover:"Zbulo →",
+        spaLabel:"SPA & MIRËQENIE", spaTitle:"Ku qetësia bëhet luksi.",
+        spaText:"Spa dhe sauna jonë janë një botë tjetër nga ritmi i qytetit. E projektuar për rivendosje të plotë — çdo vizitë është një përvojë në vetvete.",
+        spaf1:"Sauna", spaf2:"Trajtime Mirëqenie", spaf3:"Pamje nga Qyteti & Deti",
+        restLabel:"RESTORANT & BAR", restTitle:"Shijoni Rivierën Shqiptare.",
+        restText:"Restoranti ynë me tarracë të jashtme bashkon përbërës shqiptarë sezonalë dhe shumëllojshmëri verërash. Kur dita kthehet në mbrëmje, bari merr drejtimin.",
+        amLabel:"PËRVOJË", amTitle:"Gjithçka keni nevojë. Asgjë tjetër.",
+        am1n:"Pamje nga Deti & Qyteti", am1d:"Perspektiva panoramike nga çdo kat.",
+        am2n:"Spa & Sauna", am2d:"Përvojë e plotë mirëqenieje në vend.",
+        am3n:"Restorant & Bar", am3d:"Tarracë e jashtme, menu sezonale.",
+        am4n:"500m nga Plazhi", am4d:"Plazhi i Vlorës — një shëtitje e shkurtër.",
+        am5n:"Parkim Falas", am5d:"Parkim privat në vend për të gjithë.",
+        am6n:"Wi-Fi Falas", am6d:"Lidhje me shpejtësi të lartë kudo.",
+        locLabel:"VENDNDODHJA", locTitle:"Hapa nga deti.",
+        loc1:"Plazhi i Vlorës", loc1d:"500 m",
+        loc2:"Qendra e Qytetit", loc2d:"5 min në këmbë",
+        loc3:"Sheshi i Pavarësisë", loc3d:"8 min në këmbë",
+        loc4:"Aeroporti i Vlorës (i ardhshëm)", loc4d:"25 km",
+        galLabel:"GALERIA", galTitle:"Brenda Chic.",
+        ctaLabel:"REZERVIME", ctaTitle:"Qëndrimi juaj pret.",
+        ctaSub:"Chic Boutique Hotel & Spa — Vlorë, Shqipëri",
+        ctaBtn:"REZERVO NJË DHOMË →",
+        footerBook:"Rezervo qëndrimin tënd online",
+        fp1:"Politika e Privatësisë", fp2:"Kushtet e Shërbimit",
+        fcopy:"© 2024 CHIC BOUTIQUE HOTEL & SPA. TË GJITHA TË DREJTAT E REZERVUARA."
+    },
+    it: {
+        heroLabel:"Eleganza. Comodità. Classe.",
+        heroTitle:"Lo stile vive qui.",
+        heroSub:"Boutique Hotel & Spa · Est. 2024",
+        reserve:"PRENOTA →",
+        scroll:"SCORRI",
+        stat1:"Dalla spiaggia", stat2:"Categoria hotel", stat3:"& Sauna inclusa", stat4:"Servizio 24 ore",
+        manifestoLabel:"L'HOTEL",
+        manifestoTitle:"Chic. Non solo un nome. Uno standard.",
+        manifestoText:"Situato a 500 metri dalla Spiaggia di Valona, nel cuore della Riviera Albanese, Chic Boutique Hotel & Spa è il luogo dove il design raffinato incontra il calore autentico.",
+        roomsLabel:"SISTEMAZIONI", roomsTitle:"Camere & Suite",
+        r1label:"STANDARD", r1name:"Camera Junior", r1price:"Da €85 a notte",
+        r2label:"PREMIUM", r2name:"Premium Tripla con Balcone", r2price:"Da €130 a notte",
+        r3label:"DELUXE", r3name:"Deluxe Tripla con Balcone", r3price:"Da €160 a notte",
+        r4label:"SUITE", r4name:"Suite Chic — Vista Mare", r4price:"Da €240 a notte",
+        discover:"Scopri →",
+        spaLabel:"SPA & BENESSERE", spaTitle:"Dove la quiete diventa lusso.",
+        spaText:"La nostra spa e sauna sono un mondo a parte rispetto al ritmo della città. Progettate per un completo rinnovamento — ogni visita è un'esperienza in sé.",
+        spaf1:"Sauna", spaf2:"Trattamenti Benessere", spaf3:"Vista Città & Mare",
+        restLabel:"RISTORANTE & BAR", restTitle:"Assaporare la Riviera Albanese.",
+        restText:"Il nostro ristorante con terrazza esterna unisce ingredienti albanesi stagionali e una selezione di vini. Quando il giorno si trasforma in sera, il bar prende il sopravvento.",
+        amLabel:"ESPERIENZE", amTitle:"Tutto ciò di cui avete bisogno. Nient'altro.",
+        am1n:"Vista Mare & Città", am1d:"Prospettive panoramiche da ogni piano.",
+        am2n:"Spa & Sauna", am2d:"Esperienza benessere completa in loco.",
+        am3n:"Ristorante & Bar", am3d:"Terrazza esterna, menu stagionale.",
+        am4n:"500m dalla Spiaggia", am4d:"Spiaggia di Valona a pochi passi.",
+        am5n:"Parcheggio Gratuito", am5d:"Parcheggio privato per tutti gli ospiti.",
+        am6n:"Wi-Fi Gratuito", am6d:"Connessione ad alta velocità ovunque.",
+        locLabel:"POSIZIONE", locTitle:"A passi dal mare.",
+        loc1:"Spiaggia di Valona", loc1d:"500 m",
+        loc2:"Centro Città", loc2d:"5 min a piedi",
+        loc3:"Piazza dell'Indipendenza", loc3d:"8 min a piedi",
+        loc4:"Aeroporto di Valona (futuro)", loc4d:"25 km",
+        galLabel:"GALLERIA", galTitle:"Dentro Chic.",
+        ctaLabel:"PRENOTAZIONI", ctaTitle:"Il tuo soggiorno ti aspetta.",
+        ctaSub:"Chic Boutique Hotel & Spa — Valona, Albania",
+        ctaBtn:"PRENOTA UNA CAMERA →",
+        footerBook:"Prenota il tuo soggiorno online",
+        fp1:"Privacy Policy", fp2:"Termini di Servizio",
+        fcopy:"© 2024 CHIC BOUTIQUE HOTEL & SPA. TUTTI I DIRITTI RISERVATI."
+    }
+};
+
+// ================================================================
+// LANGUAGE SYSTEM
+// ================================================================
+let currentLang = localStorage.getItem('lang') || 'en';
+if (!T[currentLang]) currentLang = 'en';
+
+function setLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    const t = T[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (t[k] !== undefined) el.textContent = t[k];
+    });
+    buildHeroTitle(t.heroTitle);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        const map = { en:'ENG', sq:'ALB', it:'ITA' };
+        btn.classList.toggle('active', btn.textContent.trim() === map[lang]);
+    });
+}
+
+// ================================================================
+// HERO WORD-BLUR ANIMATION
+// ================================================================
+function buildHeroTitle(text) {
+    const el = document.getElementById('heroTitle');
+    const words = text.split(' ');
+    el.innerHTML = words.map((word, i) =>
+        `<span class="blur-word" style="animation-delay:${0.5 + i * 0.2}s">${word}</span>`
+    ).join(' ');
+}
+
+// ================================================================
+// NAV SCROLL
+// ================================================================
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+// ================================================================
+// HERO PARALLAX — subtle overlay depth shift only (bg uses CSS Ken Burns)
+// ================================================================
+const heroCanvas = document.getElementById('heroCanvas');
+window.addEventListener('scroll', () => {
+    const y = window.pageYOffset;
+    // Shift the particle canvas + overlay slightly for depth layering
+    if (heroCanvas) heroCanvas.style.transform = 'translateY(' + (y * 0.12) + 'px)';
+}, { passive: true });
+
+// ================================================================
+// SCROLL REVEAL
+// ================================================================
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// ================================================================
+// INIT
+// ================================================================
+document.addEventListener('DOMContentLoaded', () => setLang(currentLang));
+
+// ================================================================
+// HERO CANVAS — floating gold dust particles
+// ================================================================
+(function() {
+  const canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  window.addEventListener('resize', resize, { passive:true });
+  resize();
+
+  const GOLD   = [212, 175, 106];
+  const WHITE  = [255, 250, 240];
+  const N      = 90;   // particle count
+
+  function rand(a, b) { return a + Math.random() * (b - a); }
+
+  const particles = Array.from({ length: N }, () => ({
+    x:    rand(0, 1),
+    y:    rand(0, 1),
+    r:    rand(0.4, 1.8),
+    vx:   rand(-0.06, 0.06),
+    vy:   rand(-0.12, -0.04),  // mostly drift upward
+    a:    rand(0, 1),
+    da:   rand(0.002, 0.007),
+    color: Math.random() > 0.55 ? GOLD : WHITE,
+    twinkle: rand(0, Math.PI * 2),
+    twinkleSpeed: rand(0.01, 0.035),
+  }));
+
+  function draw() {
+    const W = canvas.width, H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    particles.forEach(p => {
+      // Twinkle opacity
+      const tOpacity = 0.25 + 0.55 * (0.5 + 0.5 * Math.sin(p.twinkle));
+      p.twinkle += p.twinkleSpeed;
+
+      const [r,g,b] = p.color;
+      const px = p.x * W, py = p.y * H;
+
+      // Soft glow
+      const grd = ctx.createRadialGradient(px, py, 0, px, py, p.r * 3.5);
+      grd.addColorStop(0, `rgba(${r},${g},${b},${tOpacity})`);
+      grd.addColorStop(1, `rgba(${r},${g},${b},0)`);
+      ctx.beginPath();
+      ctx.arc(px, py, p.r * 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = grd;
+      ctx.fill();
+
+      // Core dot
+      ctx.beginPath();
+      ctx.arc(px, py, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${r},${g},${b},${Math.min(tOpacity * 1.6, 0.95)})`;
+      ctx.fill();
+
+      // Move
+      p.x += p.vx * 0.001;
+      p.y += p.vy * 0.001;
+      p.a += p.da;
+
+      // Wrap
+      if (p.y < -0.02) { p.y = 1.02; p.x = rand(0, 1); }
+      if (p.x < -0.02) p.x = 1.02;
+      if (p.x > 1.02)  p.x = -0.02;
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  // Start after first paint
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>
